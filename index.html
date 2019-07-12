@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> IKO TIBA</title>
+    <!-- link the css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="logo">
+        <header class="iko">IKO-TIBA</header>
+    </div>
+    <div id="headr"></div>
+
+
+</div>
+
+<div id="container" style="position: relative;">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div id="navigation"></div>
+            <!-- the map will go inside this div below -->
+            <div id="map">
+                <div id="legend"></div>
+            </div>
+            <div class="md-form mt-0" style="position: absolute; top: 0; left: 500px; right:300px; z-index: 500; ">
+                <input class="form-control input-lg" type="text" placeholder="Search Facilities" aria-label="Search Facilities" style="background: rgba(255,255,255,0.5); border-top: none; border-right: none; border-left: none;">
+            </div>
+            <div class="col-xs-12 col-md-4"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+<!-- <script>
+    //Creating info section
+        var info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+
+        // method that we will use to update the control based on feature properties passed
+        info.update = function (properties) {
+            this._div.innerHTML = '<h4>Hospital Details</h4>' +  (properties ?
+                '<b>' +'Name: </b>'+ properties.Name + '</br>' + '<b>' + 'Current Patients In Care: </b>' + properties.Current_In + '</br>' + '<b>' + 'Patients Enrolled In Care: </b>' + properties.Enrolled_I + '</br>'
+                : 'click over a hospital');
+        };
+
+        
+        info.addTo(map);
+
+
+        function highlightFeature(e) {
+            var layer = e.target;
+            info.update(layer.feature.properties);
+        }
+        
+        
+        function onEachFeature(feature, layer) {
+            layer.on({
+                click: highlightFeature
+            });
+        }
+</script> -->
+
+</body>
+
+</html>
